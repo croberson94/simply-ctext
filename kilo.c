@@ -5,6 +5,7 @@
 // Author: Charles Roberson
 //
 
+// PRE-PROCESSOR DIRECTIVES
 #include <ctype.h>
 #include <errno.h>
 #include <stdio.h>
@@ -12,8 +13,10 @@
 #include <termios.h>
 #include <unistd.h>
 
+// DATA 
 struct termios orig_termios;
 
+// TERMINAL FUNCTIONS
 void die(const char *s){
 	perror(s);
 	exit(1);
@@ -40,6 +43,7 @@ void enableRawMode(){
 	if (tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw) == -1) die("tcgetattr");
 }
 
+// INITIALIZATION
 int main(){
 	enableRawMode();
 	while (1){
