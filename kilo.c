@@ -25,6 +25,9 @@ enum editorKey {
 	ARROW_RIGHT,
 	ARROW_UP,
 	ARROW_DOWN,
+	DEL_KEY,
+	HOME_KEY,
+	END_KEY,
 	PAGE_UP,
 	PAGE_DOWN
 };
@@ -85,8 +88,13 @@ int editorReadKey(){
 			if (seq[1] >= '0' && seq[1] <= '9'){
 				if (seq[2] == '~'){
 					switch (seq[1]){
+						case '1': return HOME_KEY;
+						case '3': return DEL_KEY;
+						case '4': return END_KEY;
 						case '5': return PAGE_UP;
 						case '6': return PAGE_DOWN;
+						case '7': return HOME_KEY;
+						case '8': return END_KEY;
 					}
 				}
 			}
@@ -96,8 +104,16 @@ int editorReadKey(){
 				case 'B': return ARROW_DOWN;
 				case 'C': return ARROW_RIGHT;
 				case 'D': return ARROW_LEFT;
+				case 'H': return HOME_KEY;
+				case 'F': return END_KEY;
 			}
 		}
+		}
+		else if (seq[0] == '0'){
+			switch (seq[1]) {
+				case 'H': return HOME_KEY;
+				case 'F': return END_KEY;
+			}
 		}
 		return '\x1b';
 	}
@@ -238,6 +254,14 @@ void editorProcessKeypress(){
 			exit(0);
 			break;
 		
+		case HOME_KEY:
+			E.cx = 0;
+			break;
+			
+		case END_KEY:
+			E.cx = E.screencols - 1;
+			break;
+			
 		case PAGE_UP:
 		case PAGE_DOWN:
 		{ int times = E.screenrows;
