@@ -305,6 +305,9 @@ void editorMoveCursor(int key){
 		case ARROW_RIGHT:
 			if (E.cx != E.screencols - 1){
 				E.cx++;
+			} else if (row && E.cx == row->size){
+				E.cy++;
+				E.cx = 0;
 			}
 			break;
 		case ARROW_UP:
