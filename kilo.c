@@ -19,7 +19,8 @@
 // DATA 
 struct editorConfig{
 	struct termios orig_termios;
-}
+};
+
 struct editorConfig E;
 
 // TERMINAL FUNCTIONS
