@@ -252,7 +252,7 @@ void editorUpdateSyntax(erow *row){
 	char **keywords = E.syntax->keywords;
 	
 	char *scs = E.syntax->singleline_comment_start;
-	char *mcs = E.syntax->multiline_commment_start;
+	char *mcs = E.syntax->multiline_comment_start;
 	char *mce = E.syntax->multiline_comment_end;
 	
 	int scs_len = scs ? strlen(scs) : 0;
