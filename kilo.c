@@ -69,6 +69,7 @@ struct editorSyntax{
 };
 
 typedef struct erow {
+	int idx;
 	int size;
 	int rsize;
 	char *chars;
