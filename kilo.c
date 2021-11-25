@@ -66,7 +66,7 @@ struct editorSyntax{
 	char *multiline_comment_start;
 	char *multiline_comment_end;
 	int flags;
-}
+};
 
 typedef struct erow {
 	int size;
