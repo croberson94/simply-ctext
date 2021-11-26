@@ -1,5 +1,5 @@
 # simply-ctext
-A text editor built using the C programming language that provides a convenient way to create/modify c programming files.
+A text editor built using the C programming language that provides a convenient way to create/modify local files.
 ## Overview
 
 ## Features
