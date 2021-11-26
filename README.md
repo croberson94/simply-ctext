@@ -24,5 +24,5 @@ This editor acts as a modification of [Snaptoken's kilo](https://viewsourcecode.
 [MIT](https://mit-license.org/)
 
 ## Helpful Links
-[Cygwin](https://www.cygwin.com/)
-[Notepad++](https://notepad-plus-plus.org/)
+* [Cygwin](https://www.cygwin.com/)
+* [Notepad++](https://notepad-plus-plus.org/)
