@@ -20,6 +20,9 @@ This editor acts as a modification of [Snaptoken's kilo](https://viewsourcecode.
 	* After downloading the files/folder, use a c compiler program (ex. Cygwin gcc package), and within the terminal execute operation with the term 'make' to create the .exe file
 	* Type the term './kilo' to enter the editor for a blank file, or './kilo 'filename'' (where filename represents the name of your existing filename and its path extension) to modify an existing file
 
+## Credits
+[Snaptoken](https://github.com/snaptoken)
+
 ## License
 [MIT](https://mit-license.org/)
 
